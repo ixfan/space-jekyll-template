@@ -1,16 +1,24 @@
 ---
-layout: compress
+layout: minimal
+title: "All Posts - X.F."
+permalink: /posts/index.html
+description: "Take a look at my awesome posts."
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
-    {% include head.html %}
-    <body>
-        <div class="page_posts">    
-        {% include svg-icons.html %}
-        {% include header-post.html %}
-        {% include tree-posts.html %}
-        </div>
-        {% include scripts.html %}
-    </body>
-</html>
+<h2>All Posts</h2>
+<ul class="post-list">
+    {% if site.paginate %}
+        {% for post in paginator.posts %}
+            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+        {% endfor %}
+        {% if paginator.total_pages > 1 %}
+    
+        {% endif%}
+    {% else %}
+        {% for post in site.posts %}
+            <li>
+                <a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a>
+            </li>
+        {% endfor %}
+    {% endif %}
+</ul>

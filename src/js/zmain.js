@@ -96,7 +96,7 @@
   });
 
   // Scroll
-  smoothScroll.init({
-    updateURL: false
-  })
+  // smoothScroll.init({
+  //   updateURL: false
+  // })
 })( Zepto, window );

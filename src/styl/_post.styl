@@ -31,13 +31,13 @@
     p, h1, h2, h3, h4,ul,ol, .tags, iframe
         max-width rem(800px)
         padding 0 rem(20px)
-        margin 0 auto rem(30px)
+        margin 0 auto rem(20px)
         mainFont(300)
-        font-size rem(18px)
-        line-height 2
+        font-size rem(16px)
+        line-height 1.8
         letter-spacing 0.01rem
         +above(cut)
-            font-size rem(20px)
+            font-size rem(16px)
     p,li
         color texts
         code
@@ -46,7 +46,7 @@
         mainFont(300)
         color main
         text-decoration none
-        border-bottom 2px solid main
+        border-bottom 1px dotted texts
         &:hover
             background-color mainHover
     iframe
@@ -111,7 +111,7 @@
     a
         text-decoration none
         &:hover svg
-            fill main
+            fill mainLight
 
 
 table
