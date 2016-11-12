@@ -1,16 +1,16 @@
 # Site settings
-title: X.F.
-description: "A blog about programing and life."
-baseurl: "" # the subpath of your site
-url: ""
+title: Lorem Ipsum - Web Developer
+description: "A blog about lorem ipsum ..."
+baseurl: "" # the subpath of your site, '' for test
+url: "" # '' for test, in production: 'https:yourusername.githu.io'
 
 # User settings
-username: 大小棥
+username: lorem ipsum
 user_title: Lorem Ipsum - FrontEnd
-email: 
-twitter_username: 0xfann
-github_username: ixfan
-instagram_username: 0xfan
+email: lorem.lorem@ipsum.com
+twitter_username: loremipsum
+github_username: loremipsum
+instagram_username: loremipsum
 gplus_username:  
 disqus_username: 
 
@@ -44,9 +44,9 @@ links:
     url: /about
 # projects in header index
 projects:
-  - name: 这是中文
+  - name: asciilang
     url: https://github.com/victorvoid/asciilang
-  - name: 中英文 English 混合
+  - name: vim-frontend
     url: https://github.com/victorvoid/vim-frontend
   - name: generator-capybara
     url: https://github.com/victorvoid/generator-capybara 

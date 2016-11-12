@@ -8,7 +8,7 @@ tags:
 - code
 - highlighting
 categories: 
-- Sample Posts
+- Sample Post
 comments: true
 ---
 
