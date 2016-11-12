@@ -28,6 +28,7 @@ user_title: Lorem Ipsum
 email: lorem@ipsum.com
 twitter_username: loremipsum
 github_username:  loremipsum
+instagram_username:  loremipsum
 gplus_username:  loremipsum
 disqus_username: loremipsum
 
