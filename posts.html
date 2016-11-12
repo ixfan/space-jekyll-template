@@ -6,19 +6,34 @@ description: "Take a look at my awesome posts."
 ---
 
 <h2>All Posts</h2>
-<ul class="post-list">
-    {% if site.paginate %}
-        {% for post in paginator.posts %}
-            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
-        {% endfor %}
-        {% if paginator.total_pages > 1 %}
-    
-        {% endif%}
-    {% else %}
-        {% for post in site.posts %}
-            <li>
-                <a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a>
-            </li>
-        {% endfor %}
-    {% endif %}
-</ul>
+{% if site.paginate %}
+    <ul class="post-list">
+    {% for post in paginator.posts %}
+        <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+    {% endfor %}
+    {% if paginator.total_pages > 1 %}
+
+    {% endif%}
+    </ul>
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% else %}
+            <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% else %}
+            <span class="next ">Next</span>
+        {% endif %}
+    </div>
+{% else %}
+    <ul class="post-list">
+    {% for post in site.posts %}
+        <li>
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}

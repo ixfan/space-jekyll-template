@@ -16,7 +16,7 @@
   {% assign filename = page.url | replace_first: '/', '' | replace: '/', '-'  | replace: '.html', '.md' %}
     <ul>
       <li><span>1</span></li>
-      <li><span> {{page.url}}</span></li>
+      <li><span> {% if page.title %} {{page.title}} {% else %} {{page.url}} {% endif %}</span></li>
       <li><span>⌘ X.F.</span></li>
       <li><span>* Menu</span></li>
     </ul>
