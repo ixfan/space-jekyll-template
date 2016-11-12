@@ -4,7 +4,11 @@ A simple and elegant Jekyll theme based on Spacemacs. The theme works well on mo
 
 See a live demo [here](https://victorvoid.github.io/space-jekyll-template/).
 
-![](https://github.com/victorvoid/space-jekyll-template/blob/master/screenshot.png?raw=true)
+![](https://github.com/ixfan/space-jekyll-template/blob/master/screenshot-01.png?raw=true)
+
+![](https://github.com/ixfan/space-jekyll-template/blob/master/screenshot-02.png?raw=true)
+
+![](https://github.com/ixfan/space-jekyll-template/blob/master/screenshot-03.png?raw=true)
 
 # Site/User Settings
 
