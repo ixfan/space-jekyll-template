@@ -1,3 +1,14 @@
+# Space Jekyll in Arsenic style
+
+A Jekyll theme based on [Space Jekyll](https://victorvoid.github.io/space-jekyll-template/).
+
+What's different?
+
+1. Arsensic style.
+2. 排版针对中文进行调整.
+3. Add "all posts" page and enable pagination for posts.
+4. Style changes for code highlight.
+
 # Space Jekyll
 
 A simple and elegant Jekyll theme based on Spacemacs. The theme works well on mobile devices as well.
