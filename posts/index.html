@@ -1,7 +1,6 @@
 ---
 layout: minimal
 title: "All Posts - X.F."
-permalink: /posts/index.html
 description: "Take a look at my awesome posts."
 ---
 
@@ -9,25 +8,26 @@ description: "Take a look at my awesome posts."
 {% if site.paginate %}
     <ul class="post-list">
     {% for post in paginator.posts %}
-        <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+        <li>
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a>
+        </li>
     {% endfor %}
-    {% if paginator.total_pages > 1 %}
-
-    {% endif%}
     </ul>
+    {% if paginator.total_pages > 1 %}
     <div class="pagination">
         {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+            <a href="{{ paginator.previous_page_path }}" class="previous">&nbsp;«&nbsp;</a>
         {% else %}
-            <span class="previous">Previous</span>
+            <span class="previous disabled">&nbsp;«&nbsp;</span>
         {% endif %}
-        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        <span class="page_number"> {{ paginator.page }} / {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+            <a href="{{ paginator.next_page_path }}" class="next">&nbsp;»&nbsp;</a>
         {% else %}
-            <span class="next ">Next</span>
+            <span class="next disabled">&nbsp;»&nbsp;</span>
         {% endif %}
     </div>
+    {% endif %}
 {% else %}
     <ul class="post-list">
     {% for post in site.posts %}
